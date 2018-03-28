@@ -1,0 +1,19 @@
+$url = "https://official.sharepoint.cloud.fco.gov.uk/XReference/"
+
+$ContentDatabase = "WSS_Content_XReference"
+
+$WebsiteName = XReference
+$WebsiteDesc = "XReference Site"
+$Template = "STS#0"
+
+$PrimaryLogin = "fco\0aclarke"
+$PrimaryDisplay = "Adrian Clarke"
+$PrimaryEmail = "Adrian.Clarke@fco.gov.uk"
+
+$SecondaryLogin = "fco\0akinwumi"
+$SecondaryDisplay = "Akin Akinwumi"
+$SecondaryEmail = "Akin.Akinwumi@fco.gov.uk"
+
+
+New-SPSite -Url $url –ContentDatabase $ContentDatabase -Name $WebsiteName –Description $WebsiteDesc -Template $Template -OwnerAlias $PrimaryLogin –OwnerEmail $PrimaryEmail -SecondaryOwnerAlias $SecondaryLogin –SecondaryEmail $SecondaryEmail
+
